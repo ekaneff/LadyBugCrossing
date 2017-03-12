@@ -114,7 +114,7 @@ In the provided space, place this line:
 ```shell
 rsync -avz ~/clone/ ssh_user@your.server.com:/path/on/server/
 ```
-Adjust the specifications as needed. The path on the server should match the path set up in the server config file in out ansible script. In this case, it would be `/var/www/html/musicapi`, since this is where we are telling nginx to look. 
+Adjust the specifications as needed. The path on the server should match the path set up in the server config file in out ansible script. In this case, it would be `/var/www/html/ladybug`, since this is where we are telling nginx to look. 
 
 Select 'Create Deployment' after that line is complete. If you would like to go ahead and set up the second deployment pipeline now, you can do so by selecting the 'Add new deployment pipeline' tab and repeating the same steps as previously outlined, but changing the IP used in the `rsync` line to that of the other server. 
 
