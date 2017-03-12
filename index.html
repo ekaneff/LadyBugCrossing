@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Lady Bug Crossing</title>
+       <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <link href = "css/main.css" rel="stylesheet" type="text/css"/>
+ 
+</head>
+<body>
+<div id="container">
+
+    <nav>
+        <h1 id="controls"><b>Lady Bug Crossing</b></h1>
+    	<h2 id="timer">Time: <span id="time"></span></h2>
+        
+        <br>
+        <p id="controls"><strong><u>CONTROLS</u></strong><br>
+            <strong>Arrow Keys:</strong> Move around<br>
+            <strong>Objective: </strong>Get to the other side of the ants!
+        </p>
+        <p><center>
+        <img src="assets/imgs/arrow.png" width="200" height="150" alt=""/></center> </p>
+        <br>
+        <!--<center>-->
+        <!--<button class="mybutton">Click to Start</button>-->
+        <!--</center>-->
+    </nav>
+    <section>
+        <canvas id="canvas" width="800" height="600" style= "background-color: #c3fbf4;" ></canvas>
+    </section>
+
+    <div id="gameOver">
+        <h1>Game Over!</h1>
+        <h2>Refresh to try again</h2>
+    </div>
+
+    <div id="win">
+        <h1>You won!</h1>
+        <h2>Refresh to play again</h2>
+    </div>
+
+    <div id="navRight"></div>
+    <footer><div class="ftrlogo"><img src="assets/imgs/fullsail1.png" width="74" height="74" /></div><div class="ftrtxt">Full Sail University</div></footer>
+
+</div> <!--//Closes container-->
+
+<script src="js/main.js"></script>
+</body>
+</html>
