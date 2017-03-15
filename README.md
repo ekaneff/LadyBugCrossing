@@ -6,21 +6,56 @@ In the [setup](setup.md) tutorial, I had you run ansible scripts that created th
 In this walk through, I will be going through the process of pushing and doing pull requests on your repository to trigger the CodeShip scripts that will deploy your files. 
 
 ##Table of Contents
-* [Creating a Pull Request](#one)
-* [Handling the Pull Request](#two)
-* [Watch CodeShip](#three)
+* [Using Gulp for Git](#one)
+* [Creating a Pull Request](#two)
+* [Handling the Pull Request](#three)
+* [Watch CodeShip](#four)
+
 
 <a name="one"></a>
-## Step One: Creating a Pull Request
+## Step One: Using Gulp for Git
+
+To make your workflow just a little bit easier, included in the repository is a `gulpfile` that can be used to make some initial git setup and git commands go by a little quicker. 
+
+Since Gulp is a Node package, we need to install it using `npm` into our project. The `package.json` with the needed dependancies is already in the repo, to install Gulp and the other necessary packages, you can simply run: 
+
+```shell
+npm install
+```
+
+Once that finishes, if you are still located on your master branch, you can run the command `gulp` in your terminal and the Gulp tasks will create a release and development branch for you, preparing you for your feature branch workflow. 
+
+Then, throughout your development process, instead of running the commands `git add` and `git commit`, you can simply run: 
+
+```shell
+gulp add --m [your commit message]
+```
+> After you run this command, run `git status` to double check that things were committed correctly. If it errors out and you still see the files as staged, try running the `gulp add` command again. 
+
+When you are ready to push to your remote branches, you can both push and add a new tag in one command by running: 
+
+```shell
+gulp push --b [branch you want to push] --v [version for tag] --m [tag message]
+```
+
+This is meant to help take away some of the more repetitive tasks needed when doing a proper git workflow, and leaves less room for human error. 
+
+
+<a name="two"></a>
+## Step Two: Creating a Pull Request
 
 Utilizing a centralized workflow means that all merges will be handled on a central point in the pipeline, such as Github. This means that instead of pushing directly to the master or release branches, the developers will be pushing their feature branches and then creating pull requests that will then be merged into the respective branches by an administrator for the repository.
 
 Using feature branch workflow, you should have in the local version of the repository at least a master, release and development branch. It is from the development branch that you would make the individual feature branches. When your development branch is ready to be merged into release, simply run the command: 
 
 ```shell
-git push origin development
+git push origin [branch you want to push]
+
+or 
+
+gulp push --b [branch you want to push] --v [version for tag] --m [tag message]
 ```
-This will create a new branch called `development` on Github and push your code into it.
+This will create a new branch on Github and push your code into it.
 
 <a name="two"></a>
 ## Step Two: Handling the Pull Request
