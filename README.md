@@ -57,8 +57,8 @@ gulp push --b [branch you want to push] --v [version for tag] --m [tag message]
 ```
 This will create a new branch on Github and push your code into it.
 
-<a name="two"></a>
-## Step Two: Handling the Pull Request
+<a name="three"></a>
+## Step Three: Handling the Pull Request
 
 Now you need to go to Github and you should see a little yellow bar with the title of your new branch in it. Select the 'Compare and pull request' button on the right. 
 
@@ -68,8 +68,8 @@ Make sure that the title and comment sections are filled out with any relevant i
 
 In this case, we are the administrators of this repository, so we are able to merge in the pull request immediately. If there are no conflicts to resolve, select the 'Merge pull request' button and confirm the merge. You can then delete the development branch as it will indicate that it is safe to do so. 
 
-<a name="three"></a>
-## Step Three: Watch CodeShip
+<a name="four"></a>
+## Step Four: Watch CodeShip
 
 Because of the `rsync` command we set up on CodeShip, merging into the correct branches is the only thing we have to do in order to deploy our files. However, if you navigate to the dashboard of your project, you will be ale to watch the progress of the deployment scripts as they fire.
 
