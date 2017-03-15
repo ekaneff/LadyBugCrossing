@@ -1,0 +1,25 @@
+{
+  "name": "music",
+  "version": "1.0.0",
+  "description": "In the [setup](setup.md) tutorial, I had you run ansible scripts that created the necessary environment on your server in addition to prepping CodeShip to deploy the project files after changes have been made on the Github repository.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ekaneff/MusicAPI.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ekaneff/MusicAPI/issues"
+  },
+  "homepage": "https://github.com/ekaneff/MusicAPI#readme",
+  "dependencies": {
+    "gulp": "^3.9.1",
+    "gulp-git": "^2.0.1",
+    "gulp-gitignore": "^0.1.0",
+    "yargs": "^7.0.2"
+  }
+}
